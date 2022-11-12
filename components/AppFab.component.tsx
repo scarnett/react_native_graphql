@@ -1,8 +1,7 @@
 import { FAB } from 'react-native-paper'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import React from 'react'
-import AppStyles from '../theme/App.styles'
-import AppTheme from '../theme/App.theme'
+import AppStyles from '@app/theme/App.styles'
+import AppTheme from '@app/theme/App.theme'
 
 const AppFab = ({ icon, iconSize, styles, size, mode, onPress }: AppFabProps) => {
   return (

@@ -1,8 +1,8 @@
-import { useAppDispatch, useAppSelector } from '../state/App.hooks'
-import { clearSnackbar } from '../state/App.slice'
+import { useAppDispatch, useAppSelector } from '@app/state/App.hooks'
+import { clearSnackbar } from '@app/state/App.slice'
 import { Text } from 'react-native'
 import { Snackbar } from 'react-native-paper'
-import AppStyles from '../theme/App.styles'
+import AppStyles from '@app/theme/App.styles'
 
 const AppSnackbar = ({ duration }: AppSnackbarProps) => {
   const dispatch = useAppDispatch()

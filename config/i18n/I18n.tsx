@@ -1,6 +1,6 @@
 import * as Localization from 'expo-localization'
 import { I18n } from 'i18n-js'
-import { lang as enUS } from '../lang/enUS'
+import { lang as enUS } from '@app/config/lang/enUS'
 
 const translations = {
   en: enUS,

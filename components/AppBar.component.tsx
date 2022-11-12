@@ -1,7 +1,6 @@
 import { Appbar } from 'react-native-paper'
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import AppStyle from '../theme/App.styles'
+import AppStyle from '@app/theme/App.styles'
 
 const AppBar = ({ title, showBack }: AppBarProps) => {
   const navigate = useNavigate()

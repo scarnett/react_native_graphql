@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import AppTheme from './App.theme'
+import AppTheme from '@app/theme/App.theme'
 
 const styles = StyleSheet.create({
   MainContainer: {

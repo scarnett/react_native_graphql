@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { logger } from 'react-native-logs'
-import { useAppDispatch, useAppSelector } from '../../state/App.hooks'
-import { addSnackbar } from '../../state/App.slice'
-import { userUpdated } from '../state/Users.slice'
-import { updateUser } from '../services/UserService.service'
-import { i18n } from '../../config/i18n/i18n'
-import AppBar from '../../components/AppBar.component'
-import UserForm from '../components/UserForm.component'
+import { useAppDispatch, useAppSelector } from '@app/state/App.hooks'
+import { addSnackbar } from '@app/state/App.slice'
+import { userUpdated } from '@app/users/state/Users.slice'
+import { updateUser } from '@app/users/services/UserService.service'
+import { i18n } from '@app/config/i18n/i18n'
+import AppBar from '@app/components/AppBar.component'
+import UserForm from '@app/users/components/UserForm.component'
 
 const EditUser = () => {
   const dispatch = useAppDispatch()

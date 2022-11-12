@@ -1,7 +1,6 @@
 import { TextInput } from 'react-native-paper'
-import React from 'react'
 import _ from 'lodash'
-import AppStyles from '../theme/App.styles'
+import AppStyles from '@app/theme/App.styles'
 
 const AppTextInput = ({ label, value, onChange, disabled, mode }: AppTextInputProps) => {
   return (

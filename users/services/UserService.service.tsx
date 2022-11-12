@@ -1,7 +1,7 @@
 import request, { gql } from 'graphql-request'
 import { logger } from 'react-native-logs'
 import { toCamel, toSnake } from 'snake-camel'
-import { GRAPHQL_URL } from '../../AppConfig'
+import { GRAPHQL_URL } from '@app/AppConfig'
 
 export async function fetchUsers() {
   const log = logger.createLogger()

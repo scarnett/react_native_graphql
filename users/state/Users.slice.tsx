@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { fetchUsers, updateUser } from '../services/UserService.service'
+import { fetchUsers, updateUser } from '@app/users/services/UserService.service'
 
 export const fetchUserList = createAsyncThunk('users/fetchUsers', async () => fetchUsers())
 export const updateUserData = createAsyncThunk('users/updateUser', async (user: User) => updateUser(user))

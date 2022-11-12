@@ -1,6 +1,6 @@
 import { Button } from 'react-native-paper'
 import _ from 'lodash'
-import AppStyles from '../theme/App.styles'
+import AppStyles from '@app/theme/App.styles'
 
 const AppButton = ({ text, mode, loading, disabled, type, onPress }: AppButtonProps) => {
   const getType = () => {

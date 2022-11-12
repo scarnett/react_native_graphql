@@ -1,14 +1,14 @@
-import { useAppSelector, useAppTypedDispatch } from '../../state/App.hooks'
-import { fetchUserList } from '../state/Users.slice'
+import { useAppSelector, useAppTypedDispatch } from '@app/state/App.hooks'
+import { fetchUserList } from '@app/users/state/Users.slice'
 import { Text } from 'react-native-paper'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { i18n } from '../../config/i18n/i18n'
-import UserListItem from '../components/UserListItem.component'
-import AppFab from '../../components/AppFab.component'
-import AppBar from '../../components/AppBar.component'
-import AppStyles from '../../theme/App.styles'
+import { i18n } from '@app/config/i18n/i18n'
+import UserListItem from '@app/users/components/UserListItem.component'
+import AppFab from '@app/components/AppFab.component'
+import AppBar from '@app/components/AppBar.component'
+import AppStyles from '@app/theme/App.styles'
 
 const Users = () => {
   const dispatch = useAppTypedDispatch()

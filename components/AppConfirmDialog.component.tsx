@@ -1,10 +1,9 @@
-import { useAppDispatch, useAppSelector } from '../state/App.hooks'
-import { clearConfirm } from '../state/App.slice'
+import { useAppDispatch, useAppSelector } from '@app/state/App.hooks'
+import { clearConfirm } from '@app/state/App.slice'
 import { Dialog, Portal, Text } from 'react-native-paper'
-import { i18n } from '../config/i18n/i18n'
-import React from 'react'
-import AppButton from './AppButton.component'
-import AppStyles from '../theme/App.styles'
+import { i18n } from '@app/config/i18n/i18n'
+import AppButton from '@app/components/AppButton.component'
+import AppStyles from '@app/theme/App.styles'
 
 const AppConfirmDialog = () => {
   const dispatch = useAppDispatch()

@@ -1,7 +1,7 @@
 import { AnyAction, configureStore, ThunkDispatch } from '@reduxjs/toolkit'
 import { createLogger } from 'redux-logger'
-import appReducer from './App.slice'
-import usersReducer from '../users/state/Users.slice'
+import appReducer from '@app/state/App.slice'
+import usersReducer from '@app/users/state/Users.slice'
 import thunk from 'redux-thunk'
 
 const logger = createLogger()
