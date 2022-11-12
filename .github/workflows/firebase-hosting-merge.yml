@@ -27,6 +27,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-cache: false
           packager: npm
           token: ${{ secrets.EXPO_TOKEN }}
 
