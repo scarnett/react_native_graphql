@@ -34,7 +34,7 @@ jobs:
         run: echo "${{ env.APP_ENV_CONFIG }}" > "${{ env.APP_ENV_CONFIG_FILE_PATH }}"
 
       - name: 'Export react native web'
-        run: expo export:web
+        run: expo export:web --clear
 
       - name: 'Deploy to firebase hosting'
         uses: FirebaseExtended/action-hosting-deploy@v0
