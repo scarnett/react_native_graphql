@@ -1,0 +1,37 @@
+name: 'Deploy to Firebase Hosting'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV_CONFIG: ${{ secrets.APP_ENV_CONFIG }}
+      APP_ENV_CONFIG_FILE_PATH: ${{ './AppConfig.tsx' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'Setup expo'
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: latest
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 'Decode AppConfig.tsx'
+        run: echo "${{ env.APP_ENV_CONFIG }}" > "${{ env.APP_ENV_CONFIG_FILE_PATH }}"
+
+      - name: 'Export react native web'
+        run: expo export:web
+
+      - name: 'Deploy to firebase hosting'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_NATIVE_GRAPHQL_4EA4A }}'
+          channelId: live
+          projectId: react-native-graphql-4ea4a

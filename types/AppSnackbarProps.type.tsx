@@ -1,0 +1,3 @@
+type AppSnackbarProps = {
+  duration?: number
+}
