@@ -13,7 +13,15 @@ jobs:
       APP_ENV_CONFIG_FILE_PATH: ${{ './AppConfig.tsx' }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: 'Set Node.js'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '60'
+
+      - name: 'Install dependencies'
+        run: npm i
 
       - name: 'Setup expo'
         uses: expo/expo-github-action@v7
