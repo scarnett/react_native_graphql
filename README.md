@@ -26,7 +26,7 @@ npm start
 
 ## Build
 ```bash
-expo build # build appfor botj platforms
+expo build # build app for both platforms
 expo build:android # build app for android
 expo build:ios # build app for ios
 expo export:web # export for web
